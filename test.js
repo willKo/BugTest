@@ -9,7 +9,7 @@ const canvas = new fabric.createCanvasForNode(600, 600);
 const font = new canvas.Font('Economica-Regular', './Economica-Regular.ttf');
 
 canvas.contextContainer.addFont(font);
-canvas.contextTop.addFont(font);(
+canvas.contextTop.addFont(font);
 //write canvas
 canvas.add(
   new fabric.IText('My Example Text is: zadgeFFE!', {
@@ -32,7 +32,7 @@ const dataurlPNG = canvas.toDataURL({
 fs.writeFileSync('dataurlPNG.txt', dataurlPNG);
 
 // write JPG dataurl
-/* 
+/*
 const dataurlJPG = canvas.toDataURL(
   {
     format: 'jpg',
