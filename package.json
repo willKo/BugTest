@@ -1,0 +1,16 @@
+{
+  "name": "fabricbug",
+  "version": "0.0.1",
+  "description": "test bug in fabric to svg ",
+  "main": "test.js",
+  "dependencies": {
+    "fabric": "1.7.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node test.js"
+  },
+  "keywords": ["fabricjs", "bug"],
+  "author": "wk",
+  "license": "ISC"
+}
