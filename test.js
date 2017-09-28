@@ -4,7 +4,7 @@ const fabric = require('fabric').fabric;
 const fs = require('fs');
 
 console.log('Script Started');
-const canvas = new fabric.createCanvasForNode(600, 200);
+const canvas = new fabric.createCanvasForNode(800, 200);
 /*<!--  canvas.Font is not defined on Windows !!!! */
 const font = new canvas.Font('Economica-Regular', 'Economica-Regular.ttf');
 
@@ -37,6 +37,10 @@ const dataurlPNG = canvas.toDataURL({
   format: 'png',
 });
 fs.writeFileSync('dataurlPNG.txt', dataurlPNG);
+
+console.log(`DONE - GENERATED FILES:
+ dataurlPNG.txt -> contains dataurl (copy content to browser to see png)
+ test.svg -> file containing SVG -> (open SVG in browser)`);
 
 // write JPG dataurl
 /*
