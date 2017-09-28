@@ -4,7 +4,7 @@ const fabric = require('fabric').fabric;
 const fs = require('fs');
 
 console.log('Script Started');
-const canvas = new fabric.createCanvasForNode(200, 200);
+const canvas = new fabric.createCanvasForNode(600, 200);
 /*<!--  canvas.Font is not defined on Windows !!!! */
 const font = new canvas.Font('Economica-Regular', 'Economica-Regular.ttf');
 
@@ -15,7 +15,7 @@ const txt = new fabric.IText('My Example Text: tea  TimE!', {
   left: 10,
   top: 30,
   fontSize: 40,
-  fontFamily: 'Economica-Regular',
+  fontFamily: 'Economica',
 });
 txt.styles[0] = {};
 for (let i = 0; i < txt.text.length; i++) {
