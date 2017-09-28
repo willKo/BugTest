@@ -6,12 +6,12 @@ const fs = require('fs');
 console.log('Script Started');
 const canvas = new fabric.createCanvasForNode(400, 400);
 /*<!--  canvas.Font is not defined on Windows !!!! */
-const font = new canvas.Font('Economica-Regular', './Economica-Regular.ttf');
+const font = new canvas.Font('Economica-Regular', 'Economica-Regular.ttf');
 
 canvas.contextContainer.addFont(font);
 canvas.contextTop.addFont(font);
 
-const txt = new fabric.IText('My Example Text is: zadgeFFE!', {
+const txt = new fabric.IText('My Example Text: tea  TimE!', {
   left: 10,
   top: 30,
   fontSize: 40,
@@ -19,7 +19,7 @@ const txt = new fabric.IText('My Example Text is: zadgeFFE!', {
 });
 txt.styles[0] = {};
 for (let i = 0; i < txt.text.length; i++) {
-  txt.styles[0][i] = { fontFamily: 'Economica-Regular', fontSize: 40 + i };
+  txt.styles[0][i] = { fontSize: 40 + i };
 }
 
 // write to canvas
