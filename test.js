@@ -4,20 +4,26 @@ const fabric = require('fabric').fabric;
 const fs = require('fs');
 
 console.log('Script Started');
-const canvas = new fabric.createCanvasForNode(600, 600);
+const canvas = new fabric.createCanvasForNode(400, 400);
 /*<!--  canvas.Font is not defined on Windows !!!! */
 const font = new canvas.Font('Economica-Regular', './Economica-Regular.ttf');
 
 canvas.contextContainer.addFont(font);
 canvas.contextTop.addFont(font);
-//write canvas
-canvas.add(
-  new fabric.IText('My Example Text is: zadgeFFE!', {
-    left: 10,
-    top: 30,
-    fontFamily: 'Economica-Regular',
-  })
-);
+
+const txt = new fabric.IText('My Example Text is: zadgeFFE!', {
+  left: 10,
+  top: 30,
+  fontSize: 40,
+  fontFamily: 'Economica-Regular',
+});
+txt.styles[0] = {};
+for (let i = 0; i < txt.text.length; i++) {
+  txt.styles[0][i] = { fontFamily: 'Economica-Regular', fontSize: 40 + i };
+}
+
+// write to canvas
+canvas.add();
 
 const svgStr = canvas.toSVG({
   suppressPreamble: true,
