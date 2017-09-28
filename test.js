@@ -4,7 +4,7 @@ const fabric = require('fabric').fabric;
 const fs = require('fs');
 
 console.log('Script Started');
-const canvas = new fabric.createCanvasForNode(400, 400);
+const canvas = new fabric.createCanvasForNode(200, 200);
 /*<!--  canvas.Font is not defined on Windows !!!! */
 const font = new canvas.Font('Economica-Regular', 'Economica-Regular.ttf');
 
@@ -21,6 +21,7 @@ txt.styles[0] = {};
 for (let i = 0; i < txt.text.length; i++) {
   txt.styles[0][i] = { fontSize: 40 + i };
 }
+txt.setCoords();
 
 // write to canvas
 canvas.add(txt);
