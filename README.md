@@ -1,6 +1,12 @@
 # BugTest
 Fabricjs- Bug test for toSvg function
 
+Issue report:
+https://github.com/kangax/fabric.js/issues/4355
+
+## Other posts
+https://stackoverflow.com/questions/46468609/fabricjs-nodejs-tosvg-wrongtext-positioning
+https://groups.google.com/forum/#!topic/fabricjs/mff7Pr4fkGY
 
 # start script: 
 
