@@ -24,7 +24,7 @@ for (let i = 0; i < txt.text.length; i++) {
 
 // write to canvas
 canvas.add(txt);
-
+canvas.renderAll();
 const svgStr = canvas.toSVG({
   suppressPreamble: true,
   encoding: 'UTF-8',
