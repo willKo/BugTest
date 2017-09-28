@@ -23,7 +23,7 @@ for (let i = 0; i < txt.text.length; i++) {
 }
 
 // write to canvas
-canvas.add();
+canvas.add(txt);
 
 const svgStr = canvas.toSVG({
   suppressPreamble: true,
