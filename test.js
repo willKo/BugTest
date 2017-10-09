@@ -4,6 +4,11 @@ const fabric = require('fabric').fabric;
 const fs = require('fs');
 
 console.log('Script Started');
+const style = fabric.document.createElement('style');
+style.textContent =
+  "@font-face {font-family: 'Economica-Regular';src: url('/Economica-Regular.ttf');font-weight: normal;font-style: normal;}";
+fabric.document.head.appendChild(style);
+
 const canvas = new fabric.createCanvasForNode(800, 200);
 /*<!--  canvas.Font is not defined on Windows !!!! */
 const font = new canvas.Font('Economica-Regular', 'Economica-Regular.ttf');
